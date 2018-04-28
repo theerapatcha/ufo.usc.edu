@@ -7,6 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Team 13 UFO Dataset</title>
+    <!-- jQuery -->
+    <script src="../../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../../js/bootstrap.min.js"></script>
+
+    <!-- Scrolling Nav JavaScript -->
+    <script src="../../js/jquery.easing.min.js"></script>
+    <script src="../../js/scrolling-nav.js"></script>
+    <script src="../../js/cardpanel.js"></script>
     <!-- Bootstrap Core CSS -->
     <link href="../../css/bootstrap.min.css" rel="stylesheet">
 
@@ -15,7 +25,11 @@
 
     <!-- Custom CSS -->
     <link href="../../css/styles.css" rel="stylesheet">
-
+    <script>
+        $(document).ready(function () {
+            $("#tabs").tab();
+        })
+    </script>
 </head>
 
 <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
@@ -65,35 +79,34 @@
         </nav>
     </div>
     <div id="main-content" style="padding-top:100px; height:90%;">
-        <div class="panel panel-default" style="height:100%;">
-            <ul class="nav nav-tabs">
-                <li class="active">
-                    <a data-toggle="tab" href="#dynamic">Dynamic Visualization</a>
-                </li>
-                <li>
-                    <a href="#">Menu 1</a>
-                </li>
-                <li>
-                    <a href="#">Menu 2</a>
-                </li>
-                <li>
-                    <a href="#">Menu 3</a>
-                </li>
-            </ul>
-            <div class="tab-content" style="height:100%">
-                <div id="dynamic" class="tab-pane fade in active" style="height:100%">
-                  <iframe src="./calendar-view.html" onload="this.width=screen.width;" frameborder="0" style="height:90%">
-                </div>
-                <div id="menu1" class="tab-pane fade">
-                  <h3>Menu 1</h3>
-                  <p>Some content in menu 1.</p>
-                </div>
-                <div id="menu2" class="tab-pane fade">
-                  <h3>Menu 2</h3>
-                  <p>Some content in menu 2.</p>
-                </div>
-              </div>
+
+        <ul class="nav nav-tabs" data-tabs="tabs">
+            <li class="active">
+                <a data-toggle="tab" href="#tab-calendar">Calendar Visualization(Dynamic)</a>
+            </li>
+            <li>
+                <a data-toggle="tab" href="#tab-maps">Maps Visualization</a>
+            </li>
+            <li>
+                <a data-toggle="tab" href="#third">3 Visualization</a>
+            </li>
+            <li>
+                <a href="#">Menu 3</a>
+            </li>
+        </ul>
+        <div class="tab-content" style="height:100%">
+            <div id="tab-calendar" class="tab-pane fade in active" style="height:100%">
+                <iframe src="./calendar-view.html" onload="this.width=screen.width;" frameborder="0" style="height:90%"></iframe>
+            </div>
+            <div id="tab-maps" class="tab-pane fade in" style="height:100%">
+                <iframe src="./html/maps.html" onload="this.width=screen.width;" frameborder="0" style="height:90%"></iframe>
+            </div>
+            <div id="third" class="tab-pane fade in">
+                <h3>Menu 2</h3>
+                <p>Some content in menu 2.</p>
+            </div>
         </div>
+
     </div>
 
     <hr class="featurette-divider">
@@ -104,17 +117,6 @@
             </footer>
         </div>
     </div>
-
-    <!-- jQuery -->
-    <script src="../js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../js/bootstrap.min.js"></script>
-
-    <!-- Scrolling Nav JavaScript -->
-    <script src="../js/jquery.easing.min.js"></script>
-    <script src="../js/scrolling-nav.js"></script>
-    <script src="../js/cardpanel.js"></script>
 </body>
 
 </html>
